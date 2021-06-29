@@ -3,35 +3,35 @@ import time
 import random
 import click
 
-d = 0  # number of left swipes
-e = 0  # number of right swipes
+left_swipes = 0
+right_swipes = 0
 
 while True:
-	b = 0 #counter
-	a = random.randint(0, 7) #anzahl bilder ansehen
-	c = random.randint(0, 2) #no (0)(1) or yes (2)
+	counter = 0
+	anzahl_bilder_wechseln = random.randint(0, 7)
+	ja_oder_nein = random.randint(0, 2)
 	pyautogui.click(1106, 558) #erster klick geht immer hier hin
-	while b<a:
-		k = random.randint(0, 3) 
-		if k <= 2:
+	while counter < anzahl_bilder_wechseln:
+		wahrsch_fuer_naechses_bild = random.randint(0, 3) 
+		if wahrsch_fuer_naechses_bild <= 2:
 			pyautogui.click(1106, 558) #weiteres bild ansehen
-			b+=1
+			counter+=1
 			time.sleep(random.randint(2,4))
-			print ("klick fuer weiteres bild in der ersten schleife" + str(b))
+			print (f"klick fuer weiteres bild in der ersten schleife {counter}")
 		else :
-			pyautogui.click(1150, 195)
+			pyautogui.click(1114, 195)
 			time.sleep(random.randint(3,5))
-			print("klick fuer vorheriges bild")
-	print "goodbye loop"
-	if c == 0 or c == 1:
-		pyautogui.click(658, 689) #left swipe
-		d+=1
-		print (str(d) + "left swipes")
-		print (str(e) + "right swipes")
-	elif c == 2:
-		pyautogui.click(1063, 674) #right swipe
-		e += 1
-		print (str(d) + "left swipes")
-		print (str(e) + "right swipes")
+			print(f"klick fuer vorheriges bild in der zweiten schleife")
+	print ("goodbye loop")
+	if ja_oder_nein <= 1:
+		pyautogui.click(758, 689) #left swipe
+		left_swipes+=1
+		print (f"so viele {left_swipes}left swipes")
+		print (f"so viele {right_swipes}right swipes")
+	elif ja_oder_nein == 2:
+		pyautogui.click(963, 674) #right swipe
+		right_swipes += 1
+		print (f"so viele left swipes -> {left_swipes}")
+		print (f"so viele right swipes ->  {right_swipes}")
 	time.sleep(random.randint(3, 5))
-	print ("das programm wurde mit b beendet =" + str(b))
+	print (f"das programm wurde mit dem counter {counter} beendet")
