@@ -5,7 +5,7 @@ import click
 
 left_swipes = 0
 right_swipes = 0
-
+#this is a test
 while True:
 	counter = 0
 	anzahl_bilder_wechseln = random.randint(0, 7)
