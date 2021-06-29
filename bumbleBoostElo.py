@@ -11,6 +11,8 @@ while True:
 	anzahl_bilder_wechseln = random.randint(0, 7)
 	ja_oder_nein = random.randint(0, 2)
 	pyautogui.click(1106, 558) #erster klick geht immer hier hin
+	print(f"erster klick geht raus")
+	print(f"es werden {anzahl_bilder_wechseln} bilder gewechselt")
 	while counter < anzahl_bilder_wechseln:
 		wahrsch_fuer_naechses_bild = random.randint(0, 3) 
 		if wahrsch_fuer_naechses_bild <= 2:
