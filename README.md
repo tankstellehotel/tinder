@@ -13,3 +13,5 @@ parallel means, that its optimized for 2 windows (split in the half of the scree
 boost elo is the most advanced version and also uses dislikes in order to not go too low with the elo-score in order to be seen by other people
 
 everything else is pretty self-explatonary
+
+https://github.com/brunetton/tinder-token-firefox-extension
